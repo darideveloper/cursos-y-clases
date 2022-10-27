@@ -9,7 +9,6 @@ Con la listad e usuarios, realiza lo siguiente:
 5. Imprime el número de usuarios que hay en la lista.
 6. Crear una nueva lista, llamada "contraseñas", donde cada usuario tenga una contraseña asociada.
 7. Imprime la contraseña que corresponde al usuario "josé" 
-
 """
 
 usuarios = [" juan ", "  maria", "jorge ", "  josé "]
