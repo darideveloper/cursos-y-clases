@@ -1,28 +1,68 @@
-empleados = {
-    'Juan' : 45, 
-    'Maria': 25, 
-    'Alex': 29, 
-    'Sofia': 48
-}
+animales = [
+    {
+        'animal':'perro', 
+        'tamaño': 'XL', 
+        'color':'negro'
+    },
+    {
+        'animal':'gato', 
+        'tamaño': 'M', 
+        'color':'naranja'
+    }, 
+    {
+        'animal':'conejo', 
+        'tamaño': 'S', 
+        'color':'blanco'
+    }
+]
 
-pago_hora = 12
+# OPCIÓN A
 
-for nombre, horas in empleados.items():
+# # Obtener lista de colores
+# colores = []
+# for animal in animales:    
+#     color = animal["color"]
+#     colores.append (color)
     
-    if horas <= 40:
-        # Calcular salario sin horas extra
-        salario = horas * pago_hora
-    else:
+
+# # Ordenar los colores
+# colores = sorted(colores)
+
+# # recorrer lista de colores ya ordenada
+# animales_ordenados = []
+# for color in colores:
+        
+#     # Recorrer lista de animales, para encontrar el del color correcto
+#     for animal in animales:
                 
-        # Calcular salario base
-        salario_base = 40 * pago_hora
+#         # Obtener color del animal actual
+#         color_animal = animal["color"]
         
-        # Calcular horas extra
-        horas_extra = horas - 40
-        horas_extra_pago = horas_extra * pago_hora * 1.5
+#         # validar el el animal tiene el color corerecto
+#         if color_animal == color:
+            
+#             # Guadar información del animal encontrado
+#             animales_ordenados.append (animal)
+            
+#             # Dejar de buscar en esa vuelta
+#             break
         
-        # Calcular salario final
-        salario = salario_base + horas_extra_pago        
+# print (f"El diccionario original es: {animales}")
+# print (f"El diccionario ordenado por color de la mascota es: {animales_ordenados}")
         
-    print (f"{nombre} trabajo {horas} y su salario es de: {salario}")
-    
+# OPCIÓN B
+
+# Obtener lista de colores
+colores = list(map(lambda aniamal:aniamal["color"], animales))
+
+# Ordenar los colores
+colores = sorted(colores)
+
+# MNostrar valores originales de la lista
+print (f"El diccionario original es: {animales}")
+
+# Genrar el nuevo diccionario ordenado
+animales.sort(key=lambda animal: colores.index(animal['color']))
+
+# Mostrar valores ordenados
+print (f"El diccionario ordenado por color de la mascota es: {animales}")

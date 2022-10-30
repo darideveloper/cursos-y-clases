@@ -23,21 +23,21 @@ print (f"El diccioarnio original es: {mascotas}")
 
 # OPCIÓN A
 
-# # Obetener y ordenar lista de colores, manualmente
-# colores = []
-# for mascota in mascotas:
-#     color = mascota['color']
-#     colores.append (color)
-# colores = sorted(colores)
+# Obetener y ordenar lista de colores, manualmente
+colores = []
+for mascota in mascotas:
+    color = mascota['color']
+    colores.append (color)
+colores = sorted(colores)
 
-# # Opción A: Ordenar diccionario mmanualmente
-# nuevas_mascotas = []
-# for color in colores:
-#     for mascota in mascotas:
-#         if color == mascota['color']:
-#             nuevas_mascotas.append (mascota)
-#             break
-# print (f"El diccioarnio original es: {nuevas_mascotas}")
+# Opción A: Ordenar diccionario mmanualmente
+nuevas_mascotas = []
+for color in colores:
+    for mascota in mascotas:
+        if color == mascota['color']:
+            nuevas_mascotas.append (mascota)
+            break
+print (f"El diccioarnio original es: {nuevas_mascotas}")
 
 
 # OPCIÓN B
