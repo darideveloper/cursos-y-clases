@@ -12,7 +12,7 @@ for lista_numeros in listas_numeros:
     for numero in lista_numeros:
         
         # resta de numeros
-        resta = numero - numero_anterior
+        resta = numero - numero_anterior    
         
         # Guardar resultado
         if numero_anterior != 0:
