@@ -9,3 +9,5 @@ edad = 20
 # Decimal, float
 altura = 1.72
 
+# Booleans (verdadero o falso)
+activo = True
