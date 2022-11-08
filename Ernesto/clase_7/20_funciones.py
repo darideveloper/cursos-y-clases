@@ -1,5 +1,10 @@
 # Crear una función que recibe un parametro / dato
 def saludo (nombre:str):
+    """ Función que imprime un saludo
+
+    Args:
+        nombre (str): nombre de la persona a saludar
+    """
     
     # Imprimir un mensaje de saludo personalizado
     print ("Hola, bienvenido")
@@ -10,11 +15,13 @@ def saludo (nombre:str):
 # Utilizar la función ya creada, enviando un datos diferentes
 saludo ("Juan")
 saludo ("maria")
+saludo ()
 
 # Función con varios parametros
 def suma_dos_numeros (num_a:int, num_b:int):
     # Imprimir la suma de los dos numeros y un mensaje
-    print (f"El resultado de la suma es: {num_a+num_b}")
+    suma = num_a+num_b
+    print (f"El resultado de la suma es: {suma}")
     
 suma_dos_numeros (2, 3)
 suma_dos_numeros (5, 6)
@@ -22,6 +29,16 @@ suma_dos_numeros (10, 20)
 
 # Devolver valores
 def suma_dos_numeros (num_a:int, num_b:int):
+    """ Función para sumar dos numeros enteros
+
+    Args:
+        num_a (int): primer numero a sumar
+        num_b (int): segundo numero a sumar
+
+    Returns:
+        int: el resultado de la suma
+    """
+
     # Devolver la suma de los dos numeros, para poder usarlos afuera de la función
     return num_a+num_b
 

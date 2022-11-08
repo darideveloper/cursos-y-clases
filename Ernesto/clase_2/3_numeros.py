@@ -10,6 +10,7 @@ print (2*2) # 4
 print (10/5) # 2.0
 print (2**3) # 8
 print (10//3) # 3
+print (11 % 2) # 1
 
 # Concatenacion con string
 vendedor = "Miguel"
