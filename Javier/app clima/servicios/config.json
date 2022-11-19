@@ -1,0 +1,7 @@
+{
+    "apikey_openweather": "5befa01aa8bca28d74a199ba31e52d6e",
+    "server": "localhost", 
+    "database": "clima", 
+    "username": "root",
+    "password": ""
+}

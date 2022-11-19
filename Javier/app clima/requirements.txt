@@ -1,0 +1,2 @@
+requests==2.28.1
+mysqlclient==2.1.0
