@@ -1,6 +1,0 @@
-venv
-temp.*
-/venv/
-__pycache__
-*.json
-*/__pycache__/*
