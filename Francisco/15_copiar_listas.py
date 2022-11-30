@@ -1,5 +1,15 @@
 # Lista original
-alumnos = ["Juan", "Maria", "Pedro", "Ana", "Jose", "Alberto"]
+alumnos = [
+    "Juan", 
+    "Maria", 
+    "Pedro", 
+    "Ana", 
+    "Jose", 
+    "Alberto", 
+    "Juan", 
+    "Maria", 
+    "Pedro"
+]
 
 # Copiar lista
 alumnos_copia = alumnos[:]

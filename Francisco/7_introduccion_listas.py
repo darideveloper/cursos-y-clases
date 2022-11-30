@@ -1,5 +1,5 @@
 # Crear una lista
-alumnos = ["Juan", "Maria", "Pedro", "Ana", "Jose", "Alberto"]
+alumnos = ["Juan", "Maria", "Pedro", "Ana", "Jose"]
             #0       1        2       3       4
           #-5       -4        -3       -2       -1
 print (alumnos) # ["Juan", "Maria", "Pedro", "Ana", "Jose"]
