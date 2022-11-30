@@ -8,6 +8,10 @@ print (python_course)
 python_course = "Soy gei si no aprendo Python"
 print (python_course)
 
+python_course = "Python está chido"
+print (python_course)
+
+
 #2-3. Personal Message: Store a person’s name in a variable, and print a message to that person. Your message should be simple, such as, “Hello Eric,would you like to learn some Python today?”
 
 Your_name = "Hola Elias "
@@ -23,22 +27,23 @@ print (My_name.lower())
 
 #2-5. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. Your output should look something like the following, including the quotation marks: Albert Einstein once said, “A person who never made a mistake never tried anything new.”
 
-The_name = "Jim Kelly dijo, "
-A_message = "'You dont have to be great to start, but you do have to start to be great'"
-print (The_name + A_message)
+A_message = 'Jim Kelly dijo, "You dont have to be great to start, but you do have to start to be great"'
+print (A_message)
 
 #2-6. Famous Quote 2: Repeat Exercise 2-5, but this time store the famous person’s name in a variable called famous_person. Then compose your message and store it in a new variable called message. Print your message.
 
-Famous_person = "Jim kelly dijo, "
-Your_message = "'You dont have to be great to start, but you do have to start to be great'"
-print (Famous_person + Your_message)
+famous_person = "Jim kelly"
+your_message = "dijo, 'You dont have to be great to start, but you do have to start to be great'"
+print (famous_person + your_message)
 
 #2-7. Stripping Names: Store a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, "\t" and "\n", at least once. Print the name once, so the whitespace around the name is displayed. Then print the name using each of the three stripping functions, lstrip(), rstrip(), and strip().
 
-A_name = "!!!!Daniela!!!!"
-print (A_name.lstrip('!'))
-print (A_name.rstrip('!'))
-print (A_name.strip('!'))
+NUMERO_ESTUDIANTES = 10
+
+a_name = "   \n\tDaniela\n\t\t"
+print (f"*{a_name.lstrip()}*")
+print (f"*{a_name.rstrip()}*")
+print (f"*{a_name.strip()}*")
 
 #2-8. Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. Be sure to enclose your operations in print statements to see the results. You should create four lines that look like this:
 
@@ -49,9 +54,10 @@ print (16 / 2)
 
 #2-9. Favorite Number: Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number. Print that message.
 
-Favorite_number = " 7 " 
+Favorite_number = 7
 My_number = "Hola, mi numero favorito es "
-print (My_number + Favorite_number)
+print (My_number + str(Favorite_number))
+print (f"{My_number} {Favorite_number}")
 
 #2-10 Adding comments:en esta parte me pide agregar comentarios como ejercicio, pero como veras, puse la descripcion de cada ejercicio como comentario, aunque obviamente es mucho texto, pero ve y dime que piensas.
 
