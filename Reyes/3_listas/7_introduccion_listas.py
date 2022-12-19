@@ -7,7 +7,7 @@ print (autos)
 
 # Acceder a un elemento de una lista 
 print ()
-primer_auto = autos[0]
+primer_auto = autos[10]
 print (primer_auto.title())
 
 # Acceder al último eklemento de una lista

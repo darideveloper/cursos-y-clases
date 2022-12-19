@@ -28,7 +28,8 @@ print (nombre.title()) # Juan Lopez
 
 nombre = "Alberto"
 apellido = "Martinez"
-print ("Bienvenido usuario " + nombre + " " + apellido)
+edad = 50
+print ("Bienvenido usuario " + edad + " " + apellido)
 
 # CONCATENAR (STRING PREFORMATEADOS / F-STRINGS)
 nombre = "Alberto"
