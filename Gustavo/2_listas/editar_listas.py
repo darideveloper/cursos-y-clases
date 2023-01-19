@@ -31,3 +31,6 @@ print ()
 
 # Consultar tamaño de listas
 print(len (estudiantes))
+
+# Error: indice fuera de rango
+print (estudiantes[99])
