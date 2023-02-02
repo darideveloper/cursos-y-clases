@@ -10,6 +10,3 @@ for elem in mis_elementos:
     
     # Gurdar elemento atual en lista de terminados
     elementos_terminados.append (elem)
-
-
-
