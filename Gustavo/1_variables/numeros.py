@@ -3,7 +3,6 @@ print (2 + 4) # 6 # suma
 print (2 - 4) # -2 # resta
 print (2 * 4) # 8 # multiplicación
 print (2 / 4) # 0.5 # división
-print (4 / 2) # 2.0 # división
 print ()
 
 # Extras de python

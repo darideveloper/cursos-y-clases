@@ -1,7 +1,7 @@
 # Intentar convertir entdada del usuario a entero
 try:
     # Solicitar entrada del usuario
-    edad = int(input ("Ingresa tu edad: "))   
+    edad = int(input ("Ingresa tu edad: "))          
 except:
     print ("Entrada inmcorrecta")
     quit ()
