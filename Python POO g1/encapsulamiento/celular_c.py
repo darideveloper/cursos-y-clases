@@ -3,7 +3,7 @@ class Celular:
         
     def __init__ (self, screen_size, battery, camara, wight, price, model, brand):
         """ constructor de clase para crear los atributos """
-        self.__screen_size__ = screen_size
+        self.screen_size = screen_size
         self.__battery__ = battery
         self.__camara__ = camara
         self.__wight__ = wight
