@@ -3,7 +3,7 @@ cliente_1 = "Juan"
 cliente_2 = "Fernando"
 cliente_3 = "Alberto"
 
-# Esttucurada de datos: listas o arreglos
+# Estrucurada de datos: listas o arreglos
 clientes = ["Juan", "Maria", "feRnaNdO", "Alberto", "dari"]
 #              0       1         2            3       4
 #             -5      -4        -3           -2      -1
@@ -22,6 +22,10 @@ clientes[2] = "Francisco"
 print (clientes)
 print ()
 # ['Juan', 'Maria', 'Francisco', 'Alberto', 'dari']
+
+# Evitar errores al consultar elementos
+print (len(clientes))
+# print (clientes[500]) # IndexError: list index out of range
 
 # Añadir elementos al final de una lista
 clientes.append ("Ocegueda")
