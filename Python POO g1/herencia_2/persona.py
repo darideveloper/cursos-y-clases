@@ -1,7 +1,3 @@
-class Carrera:
-    def __init__ (self):
-        pass
-
 class Persona:
     """ Miembro de la universidad (estudiante o profesor)"""
     
@@ -16,7 +12,7 @@ class Persona:
             edad (int): edad de la persona
             carrera (Carrera): _description_
             nacionalidad (str): nacionalidad de la persona
-            email (str): em,ail de contacto
+            email (str): email de contacto
         """
         self.__matricula__ = matricula
         self.nombre = nombre
