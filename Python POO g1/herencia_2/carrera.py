@@ -53,7 +53,7 @@ class Carrera:
             list: listado de materias de la carrera
         """
         
-        return self.__mapa_curricular__    
+        return self.__mapa_curricular__ 
     
     def set_name (self, nombre_carrera:str):
         """ Actualizar el nombre de la cerrera
@@ -76,20 +76,30 @@ class Carrera:
         Returns:
             str: clase como texto
         """
-        pass
+        
+        return f"{self.nombre.upper()} ({self.duracion} semestres - Area: {self.area.title()})"
 
-tics = Carrera("Tics", "9", "ciencias exactas")
-filosofia = Carrera("Filosofia", "8", "humanidades")
+if __name__ == "__main__":
 
-tics.add_subject ("fundamentos de programación")
-tics.add_subject ("introducción a redes")
-tics.add_subject ("desarrollo web")
+    # Crear la instancia de la clase Carrera
+    tics = Carrera("Tics", "9", "ciencias exactas")
+    filosofia = Carrera("Filosofia", "8", "humanidades")
 
-tics_materias = tics.get_subjects ()
-print (tics_materias)
-tics.del_subject ("redes 2")
+    # Utilizar los métodos de la clase
+    tics.add_subject ("fundamentos de programación")
+    tics.add_subject ("introducción a redes")
+    tics.add_subject ("desarrollo web")
 
-tics_materias = tics.get_subjects ()
-print (tics_materias)
+    tics_materias = tics.get_subjects ()
+    print (tics_materias)
+    tics.del_subject ("redes 2")
 
-tics.set_name ("Tecnologias de la Información y Comunicación")
+    tics_materias = tics.get_subjects ()
+    print (tics_materias)
+
+    tics.set_name ("Tecnologias de la Información y Comunicación")
+
+    # Imprimir el objeto
+    print (tics) # TICS (9 semestres - Area: Ciencias Exactas)
+    print (filosofia) # IFILOSOFIA (8 semestres - Area: Humanidades)
+    tics_texto = str(tics) # TICS (9 semestres - Area: Ciencias Exactas)
