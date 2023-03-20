@@ -41,7 +41,7 @@ estudiantes = [
     "adriana"
 ]
 
-estudiantes_copia = estudiantes
+estudiantes_copia = estudiantes[:]
 estudiantes_copia.append ("Dari")
 
 print (estudiantes)
