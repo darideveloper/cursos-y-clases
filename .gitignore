@@ -9,3 +9,5 @@ temp.*
 *.png
 venv
 */venv/*
+*.json
+*.csv
