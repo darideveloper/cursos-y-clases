@@ -5,7 +5,8 @@ class Persona:
     """ Miembro de la universidad (estudiante o profesor)"""
     
     def __init__ (self, nombre:str, apellido_pat:str, apellido_mat:str, 
-                  edad:int, carrera:Carrera, nacionalidad:str, email:str):
+                  edad:int, carrera:Carrera, nacionalidad:str, email:str, 
+                  tipo:str="Estudiante"):
         """ Guardar info de la clase Persona
 
         Args:
@@ -16,6 +17,7 @@ class Persona:
             carrera (Carrera): _description_
             nacionalidad (str): nacionalidad de la persona
             email (str): email de contacto
+            tipo (str): "estudiante" o "profesor"
         """
         
         # Guardar variables enviadas por el usuario
@@ -26,12 +28,12 @@ class Persona:
         self.__carrera__ = carrera
         self.nacionalidad = nacionalidad
         self.email = email
-        
-        # Calcular matricula: 3 numeros aleatorios màs la edad
-        matricula_random = random.randint (100, 999)
-        self.__matricula__ = f"{matricula_random}{self.edad}"
-        
-        # TODO: validar que no se repitan las matriculas
+        self.__matricula__ = None
+        self.matriculas = []
+        self.tipo = tipo
+                
+        # Actualizar matricula al crear la
+        self.update_mat ()
         
     def set_carrera (self, carrera:Carrera):
         """ Actualizar la carrera de la persona
@@ -72,11 +74,42 @@ class Persona:
         
         return f"{matricula}\tNombre: {inicial} {apellido}\tCarrera: {carrera_nombre}\tNacionalidad: {nacionalidad}"
     
-    def update_mat (self, matricula:int):
-        pass
-    
+    def update_mat (self):
+        """ Generar matricula de forma aleatorio y actualizarla
+        """        
+        
+        # Borrar la matricula anterior (si existe)
+        if self.__matricula__ in self.matriculas:
+            self.matriculas.remove (self.__matricula__)
+        
+        # genrar matricula en ciclo hasta encontrar una que no exista
+        intentos = 0
+        while True:
+            matricula_random = random.randint (1, 9)
+            matricula = f"{matricula_random}{self.edad}"
+            intentos += 1
+            
+            if intentos > 100:
+                print ("Error al generar matricula")
+                quit ()
+                        
+            if matricula in self.matriculas:
+                continue
+            else:
+                break
+        
+        # Guardar la nueva matricula
+        self.__matricula__ = matricula
+        self.matriculas.append (self.__matricula__)        
+            
     def set_edad (self, edad:int):
-        pass
+        """ Actualizar la edad de la persona
+
+        Args:
+            edad (int): edad actual de la persona
+        """
+        
+        self.edad = edad
     
 if __name__ == "__main__":
     
@@ -87,12 +120,4 @@ if __name__ == "__main__":
     # Crear instancias de clase
     alberto = Persona("Alberto", "González", "González", 
                       20, tics, "Mexicana", "alberto@gmail.com")
-
-    # Probar métodos
-    print (alberto.get_carrera())
-    # alberto.set_carrera ("Biología") # Forzar un error
-    print (alberto.get_carrera())
-    
     print (alberto)
-    
-    

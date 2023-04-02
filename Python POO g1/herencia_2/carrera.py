@@ -15,7 +15,7 @@ class Carrera:
         
         # Inicializar variables de uso interno
         self.__mapa_curricular__ = []
-        
+                
     def add_subject (self, nombre_materia):
         """ Agregar una materia al mapa curricular
 
@@ -54,7 +54,7 @@ class Carrera:
         """
         
         return self.__mapa_curricular__ 
-    
+       
     def set_name (self, nombre_carrera:str):
         """ Actualizar el nombre de la cerrera
 
