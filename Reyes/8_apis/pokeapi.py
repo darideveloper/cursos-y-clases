@@ -1,32 +1,62 @@
-import json
+# INSTALL REQUESTS
+# python -m pip install requests 
+
+# python: vamos a utllizar algo de python
+# -m pip: vamos a utilizar la herramienta pip de python (para borrar o añadir cosas)
+# install: añadir algo a python
+# requests: nombre de lo que vamos a añadir
+
+# Decirole a python que vamos a utilizar requests
 import requests
 
-# Lista de pokemones a consultar
-pokemones = ["pikachu", "charmander", "bulbasaur", "squirtle", "ditto"]
+# Decirle a python que vamos a utilizar json
+import json
 
-# Recorrer lista de pokemones
-for pokemon in pokemones:
+# Traer datos de un enlace
+page = f"https://pokeapi.co/api/v2/pokemon/pikachu"
+res = requests.get (page)
+
+# Convertir respuesta en formato json a un diccionario
+data = json.loads (res.text)
+
+# Consultar información dentro del diccionario
+experiencia_base = data["base_experience"]
+print (experiencia_base)
+
+# Mostrar el atributo "is_hidden" de la segunda habilidad del pokemon
+is_hidden = data["abilities"][1]["is_hidden"]
+print (is_hidden)
+
+# Mostrar el enlace del sprite correspondiente a el arte oficial
+
+art = data['sprites']['other']['official-artwork']['front_default']
+print (art)
+
+# Obtener el url del movimiento "headbutt"
+print (data['moves'][6]['move']['url'])
+
+
+# Obtener la lista de todos los movimientos
+moves = data['moves']
+
+# Recorrer la lista de movimientos
+search_move_url = ''
+search_move = "seiskbjldaskjas"
+for move in moves:
     
-    print (f"\nPokemon: {pokemon.upper()}")
-    
-    # Obtener datos del pokemon
-    page = f"https://pokeapi.co/api/v2/pokemon/{pokemon}" # URL dinamica de la api
-    res = requests.get (page)
-    res.raise_for_status () # Si no hay error, detener el programa
-    pokemon_data = json.loads (res.text) # Convierte el texto en un diccionario
 
-    # Consultar datos del pokemon
-    altura_pokemon = pokemon_data["height"]
-    print (f"\tAltura: {altura_pokemon}")
+    # obtener los datos del movimiento actual
+    name = move['move']['name']
+    url = move['move']['url']
 
-    habilidad_1 = pokemon_data["abilities"][0]["ability"]["name"]
-    print (f"\tHabilidad: {habilidad_1}")
+    # Comprobar si el movimiento se llama "headbutt", para guardar el url y terminar el ciclo
+    if name == search_move:
+        search_move_url = url
+        break
 
-    movimiento_1 = pokemon_data["moves"][0]["move"]["name"]
-    print (f"\tAtaque: {movimiento_1}")
+# Mostrar un mensaje diferente dependiendo si se encontró o no el url
 
-    sprite = pokemon_data["sprites"]["front_default"]
-    print (f"\tImagen: {sprite}")
-
-# Final del programa
-print ("Terminado")
+if search_move_url != "":
+    print (f'La url del movimiento "{search_move}" es: {search_move_url}')
+else:
+    print (f'Movimiento "{search_move}" no encontrado')    

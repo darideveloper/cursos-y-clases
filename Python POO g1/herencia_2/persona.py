@@ -29,7 +29,7 @@ class Persona:
         self.nacionalidad = nacionalidad
         self.email = email
         self.__matricula__ = None
-        self.matriculas = []
+        self.matriculas = [] # TODO: class variable
         self.tipo = tipo
                 
         # Actualizar matricula al crear la
