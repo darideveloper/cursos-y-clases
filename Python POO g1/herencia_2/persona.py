@@ -72,7 +72,7 @@ class Persona:
         carrera_nombre = self.__carrera__.nombre
         nacionalidad = self.nacionalidad[0:3].upper()     
         
-        return f"{matricula}\tNombre: {inicial} {apellido}\tCarrera: {carrera_nombre}\tNacionalidad: {nacionalidad}"
+        return f"{matricula} {inicial} {apellido}\tCarrera: {carrera_nombre}\tNacionalidad: {nacionalidad}"
     
     def update_mat (self):
         """ Generar matricula de forma aleatorio y actualizarla
@@ -85,7 +85,7 @@ class Persona:
         # genrar matricula en ciclo hasta encontrar una que no exista
         intentos = 0
         while True:
-            matricula_random = random.randint (1, 9)
+            matricula_random = random.randint (100, 900)
             matricula = f"{matricula_random}{self.edad}"
             intentos += 1
             
