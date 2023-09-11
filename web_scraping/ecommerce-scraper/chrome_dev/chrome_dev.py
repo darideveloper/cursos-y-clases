@@ -246,3 +246,19 @@ class ChromDevWrapper ():
         """
         
         response = self.chrome.Runtime.evaluate (expression=f"document.querySelector ('{selector}').{prop} = '{value}'")
+        
+    def set_zoom (self, zoom:float=1):
+        """ Change zoom in the page. 
+
+        Args:
+            zoom (float, optional): Zoom betweenb 0 and 1. Defaults to 1.
+        """
+        
+        self.chrome.Runtime.evaluate (expression=f'document.body.style.zoom = "{zoom*100}%";')
+        
+    def go_down (self):
+        """ Scroll down in the page
+        """
+        
+        self.chrome.Runtime.evaluate (expression=f"window.scrollTo(0, document.body.scrollHeight);")
+        
