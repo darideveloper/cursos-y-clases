@@ -1,8 +1,15 @@
 class Auto ():
     
-    # Recibiendo datos desde afuera 
-    # Con el contructor de la clase
     def __init__ (self, marca:str, modelo:str, color:str, precio:str, puertas:int=4):
+        """ Guardar datos del auto
+
+        Args:
+            marca (str): marca/fabricante del auto
+            modelo (str): modelo del auto
+            color (str): color del auto
+            precio (str): precio del auto
+            puertas (int, optional): Numero de puertas. Defaults to 4.
+        """
         
         self.marca = marca
         self.modelo = modelo
@@ -11,19 +18,15 @@ class Auto ():
         self.puertas = puertas
         
     def arrancar (self):
+        """ Arrancar el auto
+        """
         
         mensaje = f"El auto {self.marca} {self.modelo} ({self.color.lower()}) de arrancó"
         print (mensaje)        
     
     def frenar (self): 
+        """ Frenar el auto
+        """
         
         mensaje = f"El auto {self.marca} {self.modelo} ({self.color.lower()}) frenó"
         print (mensaje)
-
-# Indicar los atributos al mismo tiempo que se crea la instancia
-auto_nissan = Auto ("Nissan", "Versa", "Rojo", 200000, 4)
-
-print (f"La marca del auto es: {auto_nissan.marca}")
-
-auto_nissan.arrancar ()
-auto_nissan.frenar ()
